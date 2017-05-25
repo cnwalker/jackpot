@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 	//Lets create the snake now
 	var snake_array; //an array of cells to make up the snake
-	
+
 	function init()
 	{
 		d = "right"; //default direction
@@ -21,6 +21,7 @@ $(document).ready(function(){
 		create_food(); //Now we can see the food particle
 		//finally lets display the score
 		score = 0;
+        ctx.font = "20px Georgia";
 
 		//Lets move the snake now using a timer which will trigger the paint function
 		//every 60ms
