@@ -82,7 +82,7 @@ if os.environ.get('OPENSHIFT_REPO_DIR'):
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bridgesapi',
+        'NAME': 'jackpot',
         'USER': os.environ['OPENSHIFT_MYSQL_DB_USERNAME'],
         'PASSWORD': os.environ['OPENSHIFT_MYSQL_DB_PASSWORD'],
         'HOST': os.environ['OPENSHIFT_MYSQL_DB_HOST'],
