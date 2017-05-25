@@ -11,6 +11,9 @@ $(document).ready(function(){
 	var food;
 	var score;
 
+	var x_step = 1;
+	var y_step = 1;
+
 	//Lets create the snake now
 	var snake_array; //an array of cells to make up the snake
 
@@ -57,7 +60,7 @@ $(document).ready(function(){
 	{
 		//To avoid the snake trail we need to paint the BG on every frame
 		//Lets paint the canvas now
-		ctx.fillStyle = "green";
+		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
 		ctx.strokeStyle = "black";
 		ctx.strokeRect(0, 0, w, h);
@@ -67,13 +70,14 @@ $(document).ready(function(){
 		//Pop out the tail cell and place it infront of the head cell
 		var nx = snake_array[0].x;
 		var ny = snake_array[0].y;
+
 		//These were the position of the head cell.
 		//We will increment it to get the new head position
 		//Lets add proper direction based movement now
-		if(d == "right") nx++;
-		else if(d == "left") nx--;
-		else if(d == "up") ny--;
-		else if(d == "down") ny++;
+		if(d == "right") nx += x_step;
+		else if(d == "left") nx -= x_step;
+		else if(d == "up") ny -= y_step;
+		else if(d == "down") ny += y_step;
 
 		//Lets add the game over clauses now
 		//This will restart the game if the snake hits the wall
@@ -128,7 +132,7 @@ $(document).ready(function(){
 	//Lets first create a generic function to paint cells
 	function paint_cell(x, y)
 	{
-		ctx.fillStyle = "green";
+		ctx.fillStyle = "white";
 		ctx.fillRect(x*cw, y*cw, cw, cw);
 		ctx.strokeStyle = "blank";
 		ctx.strokeRect(x*cw, y*cw, cw, cw);

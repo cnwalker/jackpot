@@ -94,7 +94,7 @@ $(document).ready(function(){
 		if(nx == food.x && ny == food.y)
 		{
 			var tail = {x: nx, y: ny};
-			score++;
+			score += -2 + Math.floor(5 * Math.random());
 			//Create new food
 			create_food();
 			if (score >= 6) {

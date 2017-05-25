@@ -2,15 +2,17 @@
 <body>
     <h1 align="center">Let's play some games!</h1>
     <!-- Lets make a simple snake game -->
-    <canvas align="center" id="canvas" width="450" height="450"></canvas>
-
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="/static/{{active_script}}"></script>
+    <div align="center">
+        <canvas id="canvas" width="450" height="450"></canvas>
+    </div>
 
     <div align="center">
         <a style="padding-right: 85px;" href="{{link_one}}">Game two</a>
         <a href="{{link_two}}">Game three</a>
     </div>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/{{active_script}}"></script>
 </body>
 </html>
